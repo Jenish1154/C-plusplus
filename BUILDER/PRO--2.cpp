@@ -1,64 +1,58 @@
 #include<iostream>
-#include<stdio.h>
+#include<string.h>
 
 using namespace std;
 
-class hotel{
+class method{
 	
 	public :
-	
-	int id;
-	char name[100];
-	char type[100];
-	int staffsize;
-	int roomsize;
-	int establishyear;
-	char address[100];
-	int rating;
-	char website[100];
-	
-	    void setdata(int id,char name[50],char type[50],int staffsize,int roomsize,int establishyear,char address[50],int rating,char website[50]){
 		
-	    	this->id;
-	    	strcpy(this->name,name);
-	    	strcpy(this->type,type);
-	    	
-	    	this->staffsize;
-	    	this->roomsize;
-	    	
-			this->establishyear;
-	    	strcpy(this->address,address);
-	    	
-			this->rating;
-	    	strcpy(this->website,website);
-	    	
-	    	
-		}	
-	
-		void getdata(){
+		int a;
+		float b;
+		char c[100];
 		
-			cout<<"staff id = "<<id<<endl;
-			cout<<"staff name = "<<name<<endl;
-			cout<<"type = "<<type<<endl;
-			cout<<"staffsize = "<<staffsize<<endl;
-			cout<<"roomsize = "<<roomsize<<endl;
-			cout<<"established year = "<<establishyear<<endl;
-			cout<<"address = "<<address<<endl;
-			cout<<"rating = "<<rating<<endl;
-			cout<<"webside = "<<website<<endl;
+		void set(){
+			cout<<"Good Morning"<<endl;
+			cout<<endl;
 			
 		}
-	
+		void set(int a){
+			this->a=a;
+			cout<<"value of a ="<<a<<endl;
+			
+			
+		}
+		void set(int a,float b){
+			this->a=a;
+			this->b=b;
+			cout<<"value of a ="<<a<<endl;
+			cout<<"value of b ="<<b<<endl;
+			
+			cout<<endl;
+			
+		}
+			void set(int a,float b,char c[]){
+			this->a=a;
+			this->b=b;
+			strcpy(this->c,c);
+			cout<<"value of a ="<<a<<endl;
+			cout<<"value of b ="<<b<<endl;
+			cout<<"value of c ="<<c<<endl;
+			
+			cout<<endl;
+			
+		}
+		
 };
 
 int main(){
 	
-	hotel hl;
+	method m;
 	
-	hl.setdata(115,"JENISH","MANAGER",200,100,1999,"VIP ROAD",4,"WWW.CMOGUJARAT.ORG");
-	hl.getdata();
-	
+	m.set();
+	m.set(29);
+	m.set(30,12.76);
+	m.set(31,13.76,"KGF");
 	
 	return 0;
-	
 }
